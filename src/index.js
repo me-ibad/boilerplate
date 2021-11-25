@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import 'assets/css/index.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'react-toastify/dist/ReactToastify.css';
+import 'assets/css/App.css';
+
 import reportWebVitals from './reportWebVitals';
+import Root from 'routes';
+
+import { ToastContainer } from 'react-toastify';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Root />
+    <ToastContainer transition='slide' limit={3} />
   </React.StrictMode>,
   document.getElementById('root')
 );
