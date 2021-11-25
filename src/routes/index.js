@@ -1,11 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import history from '../history';
 import LandingPage from 'pages/Landingpage';
 import Home from 'pages/Home';
-
+import { Router, Route, Switch, Routes } from 'react-router-dom';
 function Root() {
   return (
-    <Router>
+    <Router history={history}>
       <Routes>
         <Route exact path='/' element={<LandingPage />} />
         <Route exact path='/home' element={<Home />} />
