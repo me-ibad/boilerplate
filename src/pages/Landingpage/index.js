@@ -6,10 +6,11 @@ function LandingPage() {
   let navigate = useNavigate();
   return (
     <div>
-      <a onClick={() => navigate('/home')} className='text-red-500'>
+      <button onClick={() => navigate('/home')} className='text-red-600'>
         Example page
-      </a>
-      <a onClick={() => toast('Welcome!')}>Notify!</a>
+      </button>
+      &nbsp;
+      <button onClick={() => toast('Welcome!')}>Notify!</button>
     </div>
   );
 }
