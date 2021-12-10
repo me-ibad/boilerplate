@@ -1,14 +1,14 @@
 import React from 'react';
 import history from '../history';
-import LandingPage from 'pages/Landingpage';
-import Home from 'pages/Home';
-import { Router, Route, Switch, Routes } from 'react-router-dom';
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Main from './Main';
+
 function Root() {
   return (
     <Router history={history}>
       <Routes>
-        <Route exact path='/' element={<LandingPage />} />
-        <Route exact path='/home' element={<Home />} />
+        <Route path='/*' element={<Main />} />
       </Routes>
     </Router>
   );
